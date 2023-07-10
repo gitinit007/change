@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Change Request Form</title>
-    <style>
-      form {
-        width: 300px;
-        margin: 0 auto;
-      }
-
-      label {
-        display: block;
-        margin-top: 20px;
-      }
-
-      input,
-      textarea {
-        width: 100%;
-        margin-top: 5px;
-      }
-
-      button {
-        margin-top: 20px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <form id="changeRequestForm">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="requestDetails">Request Details:</label>
-      <textarea id="requestDetails" name="requestDetails" required></textarea>
-
-      <button type="submit">Submit Request</button>
+      <label for="title">Title/Summary:</label><br />
+      <input type="text" id="title" name="title" /><br />
+      <label for="description">Description:</label><br />
+      <textarea id="description" name="description"></textarea><br />
+      <label for="requester">Requester information:</label><br />
+      <input type="text" id="requester" name="requester" /><br />
+      <label for="impact">Impact analysis:</label><br />
+      <textarea id="impact" name="impact"></textarea><br />
+      <label for="risk">Risk assessment:</label><br />
+      <textarea id="risk" name="risk"></textarea><br />
+      <label for="plan">Implementation plan:</label><br />
+      <textarea id="plan" name="plan"></textarea><br />
+      <label for="workflow">Approval workflow:</label><br />
+      <textarea id="workflow" name="workflow"></textarea><br />
+      <input type="submit" value="Submit" />
     </form>
-
-    <script>
-      document
-        .getElementById("changeRequestForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var requestDetails = document.getElementById("requestDetails").value;
-
-          alert("Thank you, " + name + ". Your request has been submitted.");
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
