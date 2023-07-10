@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Request Form</title>
+    <style>
+      form {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-top: 20px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      button {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="changeRequestForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="requestDetails">Request Details:</label>
+      <textarea id="requestDetails" name="requestDetails" required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("changeRequestForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var requestDetails = document.getElementById("requestDetails").value;
+
+          alert("Thank you, " + name + ". Your request has been submitted.");
+        });
+    </script>
+  </body>
+</html>
